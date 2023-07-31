@@ -1,0 +1,542 @@
+/* src/Header.css */
+
+.header-container {
+  position: relative;
+  overflow: hidden;
+  background-image: url(https://img.freepik.com/fotos-premium/fondo-blanco-manchas-negras-palabra-salpicadura_196290-10758.jpg?w=2000);
+}
+
+.carousel-image {
+  width: 55%;
+  height: 330px;
+  padding-left: 600px;
+}
+
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #000000;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header-title {
+  font-size: 66px;
+  margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.header-text {
+  font-size: 20px;
+}
+
+/* cards */
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 12px;
+  background-color: #ffffff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* TennisStore */
+.tennis-store-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+  background-image: url(https://img.freepik.com/fotos-premium/fondo-blanco-manchas-negras-palabra-salpicadura_196290-10758.jpg?w=2000);
+}
+
+.store-title {
+  text-align: center;
+  font-size: 46px;
+  margin-bottom: 40px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.tennis-items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 2; /* Ajusta este valor según sea necesario */
+}
+
+.tennis-item {
+  flex-basis: calc(33.333333% - 20px);
+  margin-bottom: 60px;
+  min-width: 300px;
+}
+
+.tennis-item-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+  height: 97%;
+  position: relative; /* Agrega una posición relativa al contenedor de cada elemento del tenis */
+}
+.tennis-item-card:hover {
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.item-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 22px;
+}
+
+.item-price {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.btn-primary {
+  margin-top: 10px;
+  background-color: #464545;
+  transition: background-color 0.5s ease-in-out;
+  
+}
+
+.btn-primary:hover {
+  background-color: #ff0000;
+}
+
+/* Estilos para el carrito */
+
+.cart-container {
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+  z-index: 1;
+  border: 1px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  min-width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  animation: slide-in 0.3s forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.cart-container h2 {
+  margin-top: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #000000;
+  padding: 5px 0;
+}
+
+.cart-items li:last-child {
+  border-bottom: none;
+}
+
+.cart-items button {
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 80px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.product-thumbnail {
+  width: 100px;
+  height: 65px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+
+.cart-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+  animation: slide-in 0.3s forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.cart-item-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #fff;
+  color: #dc3545;
+  font-size: 12px;
+  font-weight: bold;
+  border: 2px solid #dc3545;
+  border-radius: 50%;
+  padding: 4px;
+  transition: opacity 0.3s ease;
+}
+
+.cart-toggle-btn:hover {
+  background-color: #d15e5e;
+  transform: scale(1.1);
+}
+
+.cart-toggle-btn i {
+  pointer-events: none;
+}
+
+.checkout-button {
+  background-color: #383838;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.checkout-button:hover {
+  background-color: #ff0000;
+  transform: scale(1.05);
+}
+
+/* Estilos para el modal */
+
+
+.cart-modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-modal {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+ 
+}
+/* Estilos para mostrar y ocultar el modal */
+.cart-modal-open {
+  animation: fade-in 0.3s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.cart-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-message {
+  color: #dc3545;
+  margin-bottom: 10px;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+}
+
+button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #d15e5e;
+  transform: scale(1.05);
+}
+
+.finish {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.ov-btn-grow-skew {
+  background: #dfdfdf; /* color de fondo */
+  color: #000000; /* color de fuente */
+  border: 2px solid #000000; /* tamaño y color de borde */
+  padding: 16px 20px;
+  border-radius: 9px; /* redondear bordes */
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+ 
+}
+
+
+.ov-btn-grow-skew:hover {
+  color: #fff; /* color de fuente hover */
+}
+
+.ov-btn-grow-skew::after {
+  content: "";
+  background: #ff0000; /* color de fondo hover */
+  position: absolute;
+  z-index: -1;
+  padding: 16px 20px;
+  display: block;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.3s ease;
+}
+
+.ov-btn-grow-skew:hover::after {
+  transition: all 0.3s ease-out;
+  transform: skewX(-45deg) scale(1, 1);
+}
+
+/* Estilos generales */
+.loader {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+}
+
+.curve {
+  width: 180%;
+  height: 180%;
+  position: absolute;
+  animation: rotate 8s linear infinite;
+  fill: transparent;
+}
+
+
+.blackhole {
+  z-index: -1;
+  display: flex;
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.blackhole-circle {
+  z-index: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, black 25%, white 35%, white 100%);
+  box-shadow: 0px 0px 2rem #c2babb;
+  align-items: center;
+  justify-content: center;
+}
+
+.blackhole-circle::after {
+  z-index: 0;
+  position: absolute;
+  content: "";
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid white;
+  background: radial-gradient(circle at center, black 35%, white 60%, white 100%);
+  box-shadow: 0px 0px 5rem #c2babb;
+  align-items: center;
+  justify-content: center;
+  filter: blur(4px);
+  animation: pulseAnimation linear infinite 2s alternate-reverse;
+}
+
+.blackhole-circle::before {
+  z-index: 1;
+  content: "";
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid #ffffff;
+  box-shadow: 3px 3px 10px #c2babb, inset 0 0 1rem #ffffff;
+  border-radius: 50%;
+  top: 5rem;
+  filter: blur(0.5px);
+  animation: rotate linear infinite 3s;
+}
+
+.blackhole-disc {
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  width: 5rem;
+  height: 10rem;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #ffffff 80%, #353535 90%, white 100%);
+  filter: blur(1rem) brightness(130%);
+  border: 1rem solid white;
+  box-shadow: 0px 0px 3rem #d7c4be;
+  transform: rotate3d(1, 1, 1, 220deg);
+  animation: pulseAnimation2 linear infinite 2s alternate-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.blackhole-disc::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  width: 5rem;
+  height: 10rem;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #ffffff 80%, #353535 90%, white 100%);
+  filter: blur(3rem);
+  border: 1rem solid white;
+  box-shadow: 0px 0px 6rem #d7c4be;
+  animation: pulseAnimation linear infinite 2s alternate-reverse;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulseAnimation {
+  0% {
+    box-shadow: 0px 0px 3rem #c2babb;
+    transform: scale(1);
+  }
+
+  100% {
+    box-shadow: 0px 0px 5rem #c2babb;
+    transform: scale(1.09);
+  }
+}
+
+@keyframes pulseAnimation2 {
+  0% {
+    box-shadow: 0px 0px 3rem #c2babb;
+    transform: rotate3d(1, 1, 1, 220deg) scale(1);
+  }
+
+  100% {
+    box-shadow: 0px 0px 5rem #c2babb;
+    transform: rotate3d(1, 1, 1, 220deg) scale(0.95);
+  }
+}
